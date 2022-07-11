@@ -1,4 +1,4 @@
-const { push, shift, unshift, pop } = require('./index.js');
+const { push, shift, unshift, pop, hasDuplicates } = require('./index.js');
 
 describe('push', () => {
   it('should add an element to an array', () => {
@@ -26,5 +26,10 @@ describe('push', () => {
     expect(unshift(arr, 'z')).toBe(4);
     // expect(arr.length).toBe(4);
     expect(arr[0]).toBe('z');
+  });
+
+  it('finds duplicate data', () => {
+    const arr = ['j', 'o', 'w', 'w'];
+    expect(hasDuplicates(arr)).toBe(true);
   });
 });
