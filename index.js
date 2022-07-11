@@ -5,6 +5,11 @@ function push(arr, item) {
   return arr.length;
 }
 
+function pop(arr) {
+    arr.length = arr.length - 1;
+    return arr.length;
+  }
+
 function shift(arr) {
   const number = arr[0];
 
@@ -32,7 +37,7 @@ function unshift(arr, item) {
   return arr.length;
 }
 
-module.exports = { push, shift, unshift };
+module.exports = { push, shift, unshift, pop };
 
 // Read element by index | `const number = arr[i]`
 // Set element by index | `arr[i] = arr[i + 1]`
