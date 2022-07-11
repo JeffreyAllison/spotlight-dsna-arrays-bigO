@@ -1,7 +1,6 @@
 function push(arr, item) {
   const number = arr.length;
   arr[number] = item;
-  console.log(arr.length);
   return arr.length;
 }
 
@@ -34,13 +33,16 @@ function unshift(arr, item) {
 }
 
 function hasDuplicates(arr) {
+  //const seen = {};
   for (let i = 0; i < arr.length; i++) {
-    if (arr.i) {
+    const key = arr[i];
+    if (arr[key] === true) {
       return true;
     } else {
-      arr.i = 1;
+        arr[key] = true;
     }
   }
+  return false;
 }
 
 module.exports = { push, shift, unshift, pop, hasDuplicates };

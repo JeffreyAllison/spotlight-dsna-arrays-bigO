@@ -29,7 +29,9 @@ describe('push', () => {
   });
 
   it('finds duplicate data', () => {
-    const arr = ['j', 'o', 'w', 'w'];
-    expect(hasDuplicates(arr)).toBe(true);
+    const arr = ['j', 'o', 'x', 'w'];
+    expect(hasDuplicates(arr)).toBe(false);
+    const arr2 = ['j', 'o', 'w', 'w'];
+    expect(hasDuplicates(arr2)).toBe(true);
   });
 });
